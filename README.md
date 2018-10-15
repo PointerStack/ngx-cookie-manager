@@ -1,0 +1,1 @@
+# -pointerstack-ngx-cookie-manager
