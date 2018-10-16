@@ -1,7 +1,7 @@
 {
   "name": "@pointerstack/ngx-cookie-storage",
   "description": "An Angular cookie service",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "keywords": [
     "angular",
