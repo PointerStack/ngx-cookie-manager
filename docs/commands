@@ -1,10 +1,11 @@
-1. sgc
-2. standard-version --release-as "v1.0.0"
-3. npm run updatelibversion
-3. ng build @amcommon/amlib --prod
-4. auto-changelog --package
-5. git add --all
-6. sgc
-7. git push origin my-working-branch-name
-8. git tag v1.0.0
-9. git push origin v1.0.0
+sgc
+npm run libtest 
+standard-version --release-as "v1.0.0"
+npm run updatelibversion
+npm run npmdistribution
+auto-changelog --package
+git add --all
+sgc
+git push origin development
+git tag v1.0.0
+git push origin v1.0.0

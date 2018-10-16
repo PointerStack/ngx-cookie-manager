@@ -1,7 +1,7 @@
 To create fresh angular project
 ================================
 ```
-$> ng new amcommon --prefix amcom
+$> ng new ngx-cookie-storage-app
 ```
 
 To create a new Library inside a angular project
@@ -19,11 +19,17 @@ $> ng generate service services/ngx-cookie-storage --project=@pointerstack/ngx-c
 To build a library project
 ===========================
 ```
-$> ng build @amcommon/amlib 
+$> ng build @pointerstack/ngx-cookie-storage
 ```
 
 To build a library project for production
 =============================================
 ```
-$> ng build --prod @amcommon/amlib
+$> ng build --prod @pointerstack/ngx-cookie-storage
+```
+
+To test a library
+=============================================
+```
+ng test --project=@pointerstack/ngx-cookie-storage
 ```

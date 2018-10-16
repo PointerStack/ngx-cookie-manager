@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-cookie-storage": {
+    "ngx-cookie-storage-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-cookie-storage",
+            "outputPath": "dist/ngx-cookie-storage-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-cookie-storage:build"
+            "browserTarget": "ngx-cookie-storage-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-cookie-storage:build:production"
+              "browserTarget": "ngx-cookie-storage-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-cookie-storage:build"
+            "browserTarget": "ngx-cookie-storage-app:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "ngx-cookie-storage-e2e": {
+    "ngx-cookie-storage-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-cookie-storage:serve"
+            "devServerTarget": "ngx-cookie-storage-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-cookie-storage:serve:production"
+              "devServerTarget": "ngx-cookie-storage-app:serve:production"
             }
           }
         },
@@ -133,6 +133,11 @@
           "options": {
             "tsConfig": "projects/pointerstack/ngx-cookie-storage/tsconfig.lib.json",
             "project": "projects/pointerstack/ngx-cookie-storage/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/pointerstack/ngx-cookie-storage/ng-package.json"
+            }
           }
         },
         "test": {
@@ -158,5 +163,5 @@
       }
     }
   },
-  "defaultProject": "ngx-cookie-storage"
+  "defaultProject": "ngx-cookie-storage-app"
 }

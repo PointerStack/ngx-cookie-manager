@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "libtest": "ng test @pointerstack/ngx-cookie-storage",
+    "copy-readme-license": "node ./scripts/copy-readme-license",
+    "buildlib": "ng build --prod @pointerstack/ngx-cookie-storage",
+    "npmpack": "cd dist/pointerstack/ngx-cookie-storage && npm pack",
+    "npmdistribution": "npm run updatelibversion && npm run buildlib && npm run copy-readme-license && npm run npmpack",
+    "updatelibversion": "node ./scripts/updatelibversion.js"
   },
   "private": false,
   "dependencies": {
@@ -20,8 +26,11 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "auto-changelog": "^1.8.1",
     "core-js": "^2.5.4",
+    "fs-extra": "^7.0.0",
     "rxjs": "~6.2.0",
+    "standard-version": "^4.4.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -48,5 +57,18 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~2.9.2"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true,
+      "commit": true,
+      "tag": true
+    }
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
