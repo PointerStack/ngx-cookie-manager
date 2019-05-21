@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "travistest": "ng test @pointerstack/ngx-cookie-storage --watch=false --browsers=ChromeHeadless",
     "libtest": "ng test @pointerstack/ngx-cookie-storage",
     "copy-readme-license": "node ./scripts/copy-readme-license",
     "buildlib": "ng build --prod @pointerstack/ngx-cookie-storage",
