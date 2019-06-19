@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "travistest": "ng test @pointerstack/ngx-cookie-storage --watch=false --browsers=ChromeHeadless",
-    "libtest": "ng test @pointerstack/ngx-cookie-storage",
+    "travistest": "./node_modules/.bin/ng test @pointerstack/ngx-cookie-storage --watch=false --browsers=ChromeHeadless",
+    "libtest": "./node_modules/.bin/ng test @pointerstack/ngx-cookie-storage",
     "copy-readme-license": "node ./scripts/copy-readme-license",
-    "buildlib": "ng build --prod @pointerstack/ngx-cookie-storage",
+    "buildlib": "./node_modules/.bin/ng build --prod @pointerstack/ngx-cookie-storage",
     "npmpack": "cd dist/pointerstack/ngx-cookie-storage && npm pack",
     "npmdistribution": "bash ./scripts/npmdistribution.sh",
     "updatelibversion": "node ./scripts/updatelibversion.js"
