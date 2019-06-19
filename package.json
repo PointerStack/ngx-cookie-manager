@@ -13,7 +13,7 @@
     "copy-readme-license": "node ./scripts/copy-readme-license",
     "buildlib": "ng build --prod @pointerstack/ngx-cookie-storage",
     "npmpack": "cd dist/pointerstack/ngx-cookie-storage && npm pack",
-    "npmdistribution": "npm run updatelibversion && npm run buildlib && npm run copy-readme-license && npm run npmpack",
+    "npmdistribution": "bash ./scripts/npmdistribution.sh",
     "updatelibversion": "node ./scripts/updatelibversion.js"
   },
   "private": false,

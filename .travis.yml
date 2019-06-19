@@ -1,8 +1,13 @@
---- 
-addon: 
+addon:
   chrome: stable
+deploy:
+  provider: script
+  script: npm run npmdistribution
+  on:
+    tags: true
+    repo: PointerStack/ngx-cookie-storage
 language: node_js
-node_js: 
-  - node
-script: 
-  - "npm run travistest"
+node_js:
+- node
+script:
+- npm run travistest

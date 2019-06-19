@@ -1,8 +1,8 @@
 sgc
-npm run libtest 
+npm run libtest -g
 standard-version --release-as "v1.0.0"
-npm run updatelibversion
-npm run npmdistribution
+npm run updatelibversion -g
+# npm run npmdistribution
 auto-changelog --package
 git add --all
 sgc
